@@ -1,0 +1,18 @@
+---
+architecture: "standalone"
+master:
+    password: "notarealpassword"
+    persistence:
+        enabled: false
+    podSecurityContext:
+        enabled: false
+    containerSecurityContext:
+        enabled: false
+
+tls:
+    enabled: true
+    existingSecret: "redis-tls"
+    certFilename: cert.pem
+    certKeyFilename: cert.key
+    certCAFilename: ca.pem
+
